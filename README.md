@@ -39,9 +39,7 @@ your wiki. For example, the contents of `/wiki/Mustache:Lottery` could be:
 
     {{/results}}
 
-For more information on how Mustache templates work see the [Mustache documentation][]
-
-  [Mustache documentation] http://mustache.github.io/mustache.5.html
+For more information on how Mustache templates work see the mustache.php [documentation](https://github.com/bobthecow/mustache.php/wiki).
 
 Now you can use the template in an article using the Semantic MediaWiki `ask`
 parser function to create the context:
@@ -60,15 +58,12 @@ templates. In this example, if the page `/wiki/Module:ValueHelpers` has the
 code:
 
     local p = {}
-
     p.value = 10000
-
     p.taxed_value = function() return p.value - (p.value * 0.4) end
-
     return p
 
 And Chris and Arnold are selected as winners, with Arnold in the category of
-Californians (`in_ca` is `true`), the `ask` parser function will transclude:
+Californians (`in_ca` is `true`), the `ask` parser function will output:
 
     == Winners ==
     Hello Chris
@@ -109,7 +104,7 @@ extension code, add a closure instance or invokable class to the global
 `$srfmHelpers` array.
 
 If you have a single Scribunto module that has helpers to be included in
-Mustache templates by default, set `$srfmDefaultHelperModule` to the pagename
+Mustache templates by default, set `$srfmDefaultHelperModule` to the title text
 of the page in the Module namespace.
 
 ### Formatting quantities and numbers
@@ -127,5 +122,3 @@ anyone who wants to contribute.
 ### To Do
 
 * API module to load and render Mustache templates in the browser.
-
-&copy; Tony Crisci, 2013
