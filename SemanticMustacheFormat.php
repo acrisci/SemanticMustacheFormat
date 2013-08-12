@@ -38,8 +38,8 @@ if ( class_exists('Mustache_Engine') && strpos(Mustache_Engine::VERSION, '2.') !
 }
 
 # Define Mustache namespace
-define( "SRFM_NS_MUSTACHE", 816 );
-define( "SRFM_NS_MUSTACHE_TALK", 817 );
+define( "SRFM_NS_MUSTACHE", 806 );
+define( "SRFM_NS_MUSTACHE_TALK", 807 );
 $wgExtraNamespaces[SRFM_NS_MUSTACHE] = "Mustache";
 $wgExtraNamespaces[SRFM_NS_MUSTACHE_TALK] = "Mustache_talk";
 
